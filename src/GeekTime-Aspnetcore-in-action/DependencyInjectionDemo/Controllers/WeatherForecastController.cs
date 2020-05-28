@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using DependencyInjectionDemo.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 namespace DependencyInjectionDemo.Controllers
@@ -23,19 +25,7 @@ namespace DependencyInjectionDemo.Controllers
         {
             _logger = logger;
         }
-
-        //[HttpGet]
-        //public IEnumerable<WeatherForecast> Get()
-        //{
-        //    var rng = new Random();
-        //    return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        //    {
-        //        Date = DateTime.Now.AddDays(index),
-        //        TemperatureC = rng.Next(-20, 55),
-        //        Summary = Summaries[rng.Next(Summaries.Length)]
-        //    })
-        //    .ToArray();
-        //}
+      
 
         [HttpGet]
         public int GetService([FromServices]IMySingletonService mySingletonService1,
@@ -71,9 +61,33 @@ namespace DependencyInjectionDemo.Controllers
         [HttpGet]
         public int GetGenericService([FromServices] IGenericService<IOrderService> genericService)
         {
-            
-
+          
             return 1;
+        }
+
+        [HttpGet]
+        public int GetDisposableService(
+            [FromServices] IHostApplicationLifetime hostApplicationLifetime,
+            [FromQuery] bool stop)
+        {
+            //HttpContext.RequestServices 当前请求的根容器
+            using (var scope = HttpContext.RequestServices.CreateScope()) 
+            {
+                var service = scope.ServiceProvider.GetService<IDisposableService>();
+
+                var service2 = scope.ServiceProvider.GetService<IDisposableService>();
+
+                Console.WriteLine("作用域执行结束");
+
+            }
+            if (stop)
+            {
+                hostApplicationLifetime.StopApplication();
+            }
+
+
+            Console.WriteLine("方法执行完成");
+            return 2;
         }
     }
 }

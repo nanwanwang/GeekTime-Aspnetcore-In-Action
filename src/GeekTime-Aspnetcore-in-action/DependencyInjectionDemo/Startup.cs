@@ -27,6 +27,7 @@ namespace DependencyInjectionDemo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            #region 注册服务
 
             services.AddSingleton<IMySingletonService, MySingletonService>();
             services.AddTransient<IMyTransientService, MyTransientService>();
@@ -52,6 +53,19 @@ namespace DependencyInjectionDemo
 
             //泛型服务注册
             services.AddSingleton(typeof(IGenericService<>), typeof(GenericService<>));
+            #endregion
+
+
+            //services.AddTransient<IDisposableService, DisposableService>();
+            //services.AddScoped<IDisposableService, DisposableService>();
+            //services.AddSingleton<IDisposableService, DisposableService>();
+
+            //services.AddScoped<IDisposableService>(serviceProvider=>new DisposableService());
+
+            //注册我们直接创建的(new)对象 容器不释放对象
+            //services.AddSingleton<IDisposableService>(new DisposableService()); 
+
+            services.AddTransient<IDisposableService>(serviceProvider => new DisposableService());
             services.AddControllers();
         }
 
@@ -62,6 +76,9 @@ namespace DependencyInjectionDemo
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            //从根容器获取瞬时服务
+            var services= app.ApplicationServices.GetService<IDisposableService>();
 
             app.UseHttpsRedirection();
 

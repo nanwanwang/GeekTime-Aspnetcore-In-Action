@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-StartupDemo", "StartupDemo\01-StartupDemo.csproj", "{62CDFCF3-725E-4B14-B5AC-A88A681C6D92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjectionDemo", "DependencyInjectionDemo\DependencyInjectionDemo.csproj", "{B3261B54-BCB2-4B3C-9867-D64634C57B15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInjectionDemo", "DependencyInjectionDemo\DependencyInjectionDemo.csproj", "{B3261B54-BCB2-4B3C-9867-D64634C57B15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreePartDependencyInjection", "ThreePartDependencyInjection\ThreePartDependencyInjection.csproj", "{4A313D30-FE0E-461D-953D-B9304924EB62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B3261B54-BCB2-4B3C-9867-D64634C57B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3261B54-BCB2-4B3C-9867-D64634C57B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3261B54-BCB2-4B3C-9867-D64634C57B15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A313D30-FE0E-461D-953D-B9304924EB62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A313D30-FE0E-461D-953D-B9304924EB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A313D30-FE0E-461D-953D-B9304924EB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A313D30-FE0E-461D-953D-B9304924EB62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
