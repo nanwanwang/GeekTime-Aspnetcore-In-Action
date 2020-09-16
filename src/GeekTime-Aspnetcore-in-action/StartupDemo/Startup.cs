@@ -20,6 +20,7 @@ namespace StartupDemo
 
             Console.WriteLine("Startup");
             Configuration = configuration;
+            
         }
 
         public IConfiguration Configuration { get; }

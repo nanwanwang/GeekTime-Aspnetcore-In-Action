@@ -80,7 +80,7 @@ namespace DependencyInjectionDemo
             //从根容器获取瞬时服务
             var services= app.ApplicationServices.GetService<IDisposableService>();
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
