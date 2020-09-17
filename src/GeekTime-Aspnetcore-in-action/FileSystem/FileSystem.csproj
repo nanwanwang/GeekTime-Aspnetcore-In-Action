@@ -6,8 +6,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="test\dir1\baz.txt" />
+    <None Remove="test\dir1\foobar\bar.txt" />
+    <None Remove="test\dir1\foobar\foo.txt" />
+    <None Remove="test\dir2\qux.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="test\dir1\baz.txt" />
+    <EmbeddedResource Include="test\dir1\foobar\bar.txt" />
+    <EmbeddedResource Include="test\dir1\foobar\foo.txt" />
+    <EmbeddedResource Include="test\dir2\qux.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.8" />
     <PackageReference Include="Microsoft.Extensions.FileProviders.Abstractions" Version="3.1.8" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="3.1.8" />
     <PackageReference Include="Microsoft.Extensions.FileProviders.Physical" Version="3.1.8" />
   </ItemGroup>
 
