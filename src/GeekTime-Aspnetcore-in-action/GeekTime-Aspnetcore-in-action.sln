@@ -25,11 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleDI2", "SimpleDI2\Simp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileSystem", "FileSystem\FileSystem.csproj", "{6016B8C6-75DA-4613-B486-44ED6192BC1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOPDemo", "AOPDemo\AOPDemo.csproj", "{C4CBECD8-ED55-46B7-AE7D-65BDAEF0217D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AOPDemo", "AOPDemo\AOPDemo.csproj", "{C4CBECD8-ED55-46B7-AE7D-65BDAEF0217D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dora.Interception", "D:\sourcecode\Dora-master\src\Dora.Interception\Dora.Interception\Dora.Interception.csproj", "{4D9A94BA-0795-4FA1-93A8-D1DC033FA8BB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dora.Interception.Abstractions", "D:\sourcecode\Dora-master\src\Dora.Interception\Dora.Interception.Abstractions\Dora.Interception.Abstractions.csproj", "{87B8000C-9D89-4F5F-B4C2-AFC81455F760}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMvc", "MiniMvc\MiniMvc.csproj", "{F99C294C-D676-4AE0-A10D-C407972F2F06}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -92,6 +94,10 @@ Global
 		{87B8000C-9D89-4F5F-B4C2-AFC81455F760}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87B8000C-9D89-4F5F-B4C2-AFC81455F760}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87B8000C-9D89-4F5F-B4C2-AFC81455F760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99C294C-D676-4AE0-A10D-C407972F2F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99C294C-D676-4AE0-A10D-C407972F2F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99C294C-D676-4AE0-A10D-C407972F2F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99C294C-D676-4AE0-A10D-C407972F2F06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
